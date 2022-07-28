@@ -1,19 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto11
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_buils phases ....
   build:
-    command:
-      - echo Build stared on `date`
-      - mvn package
+    commands:
+      - echo Entered the build phase...
+      - mvn clean package
   post_build:
     commands:
-      - echo Build completeon `date`
+      - echo Build completed successfully
 artifacts:
   files:
-    - target/*.war
+    - target/webapp.war
+  discard-paths: yes
