@@ -3,12 +3,11 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo Entered the build phase...
-      - chmod 777 buildspec.yaml
+      - echo Entered the build phase...`
       - mvn clean package
   post_build:
     commands:
-      - echo Build completed successfully
+      - `echo Build completed successfully`
 artifacts:
   files:
     - webapp/target/webapp.war
